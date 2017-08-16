@@ -18,5 +18,10 @@ select max(quantity) from order_details group by orderid
 select min(quantity) from order_details group by orderid
 13. select customerid from orders where orderid=10290
 
-14. select orders.customerid, customers.contactname from orders inner join customers 
-on orders.customerid = customers.contactname
+14. *select orders.customerid, customers.customerid from orders inner join customers 
+on orders.customerid = customers.customerid
+*select orders.orderdate, customers.contactname from orders left join customers 
+on orders.customerid = customers.customerid
+* 
+15. select firstname from employees where reportsto is null
+16. select firstname from employees where reportsto=2
